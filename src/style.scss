@@ -25,6 +25,16 @@
   }
 }
 
+.action-button {
+  padding: 0.5rem 1.1rem 0.7rem;
+  letter-spacing: -0.3px;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  &.gold {
+    background-color: #FFDB2D;
+  }
+}
+
 .body_header {
   .header_top-bar {
     display: flex;
@@ -169,12 +179,7 @@
         border-right: none;
         font-size: 1.1rem;
       }
-      .action-button {
-        padding: 0.5rem 1.1rem 0.7rem;
-        letter-spacing: -0.3px;
-        border-radius: 0.5rem;
-        background-color: transparent;
-      }
+
     }
     @media screen and (max-width:  700px) {
       flex-wrap: wrap;

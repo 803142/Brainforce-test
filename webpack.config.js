@@ -37,7 +37,7 @@ module.exports = {
         use: ['babel-loader', 'eslint-loader'],
       },
       {
-        test: /\.(svg|png|gif|jpg|webp|ico)$/,
+        test: /\.(svg|png|gif|jpg|webp)$/,
         use: {
           loader: 'file-loader',
           options: {
@@ -47,7 +47,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(eot|woff|woff2|ttf|svg|ico)/i,
+        test: /\.(eot|woff|woff2|ttf|svg)/i,
         use: [
           {
             loader: 'file-loader',
@@ -55,6 +55,19 @@ module.exports = {
               name: '[name].[ext]',
               context: 'src',
               outputPath: 'fonts',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(ico)/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              context: 'src',
+              outputPath: '/',
             },
           },
         ],
