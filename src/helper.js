@@ -24,10 +24,9 @@ const findTarget = (target, lookingAction) => {
   let pointTarget = target;
   while (pointTarget) {
     if (pointTarget.dataset) {
-      if (pointTarget.dataset[lookingAction]) {
-        const action = pointTarget.dataset[lookingAction];
-        const { name } = pointTarget.dataset;
-        if (action) return { action, name };
+      if (pointTarget.dataset[lookingAction] !== undefined) {
+        const address = pointTarget.dataset[lookingAction];
+        return { address, pointTarget };
       }
     }
     pointTarget = pointTarget.parentNode;
@@ -37,4 +36,6 @@ const findTarget = (target, lookingAction) => {
 
 const qs = (selector, scope) => (scope || document).querySelector(selector);
 
-export { simpleTag, importAll, findTarget, qs };
+const qsAll = (selector, scope) => (scope || document).querySelectorAll(selector);
+
+export { simpleTag, importAll, findTarget, qs, qsAll };
