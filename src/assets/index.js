@@ -1,7 +1,7 @@
 import { importAll } from '../helper';
 
+import { baseData, keys } from './base.data';
+
 const images = importAll(require.context('./img', false, /\.(png|jpe?g|svg)$/));
 
-const data = { images };
-
-export default data;
+export { images, baseData, keys };

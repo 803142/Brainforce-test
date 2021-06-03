@@ -24,9 +24,10 @@ const findTarget = (target, lookingAction) => {
   let pointTarget = target;
   while (pointTarget) {
     if (pointTarget.dataset) {
-      if (pointTarget.dataset[lookingAction] !== undefined) {
-        const address = pointTarget.dataset[lookingAction];
-        return { address, pointTarget };
+      if (pointTarget.dataset[lookingAction]) {
+        const action = pointTarget.dataset[lookingAction];
+        const { name } = pointTarget.dataset;
+        if (action) return { action, name };
       }
     }
     pointTarget = pointTarget.parentNode;
