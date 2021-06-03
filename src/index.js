@@ -4,8 +4,6 @@ import './favicon.ico';
 import { APPCONTAINERCLASS, BODYTAG } from './constants/app-constants';
 import App from './app';
 
-// import foneForm from './components/foneForm/modal.template';
-
 import { simpleTag, qs } from './helper';
 
 window.onload = () => {

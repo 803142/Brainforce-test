@@ -1,9 +1,8 @@
 import { simpleTag } from '../../helper';
-import './foneForm.scss';
 
-const foneModal = {
-  modalTemplate: `<div class="modal-owerlay">
-    <div class="modal-window">
+const phoneModal = {
+  modalTemplate: `<div class="modal-owerlay" data-click="closedContactFormModal">
+    <div class="modal-window" data-click="preventClosedContactFormModal">
       <form action="">
         <div class="introduction">
           Заполните форму и закажите бесплатную консультацию
@@ -31,4 +30,4 @@ const foneModal = {
   },
 };
 
-export default foneModal;
+export default phoneModal;

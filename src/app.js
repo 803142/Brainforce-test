@@ -27,7 +27,7 @@ class App extends Component {
       const { target } = clicked;
       if (findTarget(target, 'click')) {
         const { action, name } = findTarget(target, 'click');
-        this.events.dispatchEvent(action.toString(), name.toString());
+        this.events.dispatchEvent(`${action}`, `${name}`);
       }
     });
   }

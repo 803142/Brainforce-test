@@ -67,7 +67,6 @@ module.exports = {
             options: {
               name: '[name].[ext]',
               context: 'src',
-              outputPath: '/',
             },
           },
         ],
