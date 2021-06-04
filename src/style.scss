@@ -218,7 +218,6 @@
         display: flex;
         margin-top: 2.5rem;
         margin-bottom: 4.1rem;
-
         .article-accordeon_heading {
           min-width: 13rem;
           .accordeon_heading_h3 {
@@ -244,10 +243,10 @@
             &.active {
               &::after {
                 transform: rotate(45deg);
-
               }
               .description {
                 max-height:999px;
+                padding: .55rem;
               }
             }
             &::after {
@@ -267,7 +266,6 @@
             .description {              
               max-height:0px;
               overflow: hidden;
-              padding: .55rem;
               transition: 0.5s; 
               .paragraf {
                 margin-top:1rem;

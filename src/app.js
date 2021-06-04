@@ -30,6 +30,25 @@ class App extends Component {
         this.events.dispatchEvent(`${action}`, `${name}`);
       }
     });
+    document.body.addEventListener('keydown', (keyPressed) => {
+      keyPressed.preventDefault();
+      const { target, key } = keyPressed;
+      if (target.dataset.keydown) {
+        this.events.dispatchEvent(target.dataset.keydown, key);
+      }
+    });
+    document.body.addEventListener('focusin', (focused) => {
+      const { target } = focused;
+      if (target.dataset.focusin) {
+        this.events.dispatchEvent(target.dataset.focusin);
+      }
+    });
+    document.body.addEventListener('focusout', (focused) => {
+      const { target } = focused;
+      if (target.dataset.focusout) {
+        this.events.dispatchEvent(target.dataset.focusout);
+      }
+    });
   }
 }
 

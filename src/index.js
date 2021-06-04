@@ -22,21 +22,6 @@ window.onload = () => {
   app.render();
   app.start();
 
-  // fffff
-  // const modal = foneForm.render();
-
-  // function setCursorPosition(pos, e) {
-  //   e.focus();
-  //   if (e.setSelectionRange) e.setSelectionRange(pos, pos);
-  //   else if (e.createTextRange) {
-  //     const range = e.createTextRange();
-  //     range.collapse(true);
-  //     range.moveEnd('character', pos);
-  //     range.moveStart('character', pos);
-  //     range.select();
-  //   }
-  // }
-
   // function phoneMask(e) {
   //   if (e.keyCode) this.keyCode = e.keyCode;
   //   const pos = e.target.selectionStart;
